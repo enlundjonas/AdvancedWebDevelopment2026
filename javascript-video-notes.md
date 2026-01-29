@@ -1,15 +1,15 @@
 <h1>JavaScript introduction videos</h1>
 
-<p>Video 1/51</p>
+Video 1/51
 There is not much to say about this one, an introduction to the series and presentation of the ones behind it.
 
-<p>Video 2/51</p>
+Video 2/51
 JavaScript is the most used programming language globally. VSCode is written in JavaScript.
 
-<p>Video 3/51</p>
+Video 3/51<
 JavaScript can run directly in the code using <script> (not recommended though) or in a .js file. Node.js for the server. 
   
-<p>Video 4/51</p>
+Video 4/51
 I will check out the extensions mentioned in the video (ESLint, Prettier and ES6 code snippets). I will also install Node.js 
 
 Video 5/51
@@ -152,9 +152,3 @@ Package management continued. First we need install package.json via npm(Node Pa
 
 Video 51/51
 Now what? The video recommends the github repository that is linked under each video, and to keep using javascript in order to keep up the knowledge. 
-
-              Package management continued. First we need install package.json via npm(Node Package Manager), in the terminal.  Installed packages can be run in the CLI, and with the help of packages we can for instance run scripts, connect to servers or format the code.
-
-Video 51/51
-
-              Now what? The video recommends the github repository that is linked under each video, and to keep using javascript in order to keep up the knowledge.
