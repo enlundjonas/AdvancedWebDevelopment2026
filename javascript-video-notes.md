@@ -1,12 +1,12 @@
 <h1>JavaScript introduction videos</h1>
 
-Video 1/51
+<h2>Video 1/51</h2>
 There is not much to say about this one, an introduction to the series and presentation of the ones behind it.
 
 Video 2/51
 JavaScript is the most used programming language globally. VSCode is written in JavaScript.
 
-Video 3/51<
+Video 3/51
 JavaScript can run directly in the code using <script> (not recommended though) or in a .js file. Node.js for the server. 
   
 Video 4/51
