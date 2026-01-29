@@ -1,12 +1,16 @@
 <h1>JavaScript introduction videos</h1>
 <p>Video 1/51</p>
 There is not much to say about this one, an introduction to the series and presentation of the ones behind it.
-Video 2/51
+
+<p>Video 2/51</p>
 JavaScript is the most used programming language globally. VSCode is written in JavaScript.
-Video 3/51
+
+<p>Video 3/51</p>
 JavaScript can run directly in the code using <script> (not recommended though) or in a .js file. Node.js for the server. 
-Video 4/51
+  
+<p>Video 4/51</p>
 I will check out the extensions mentioned in the video (ESLint, Prettier and ES6 code snippets). I will also install Node.js 
+
 Video 5/51
 This was just more hands-on approach of the previous video, showing how to install everything mentioned. After watching this, I installed Node.js and some extensions on VSCode. I had some problems, but I managed to install it.
 Video 6/51
