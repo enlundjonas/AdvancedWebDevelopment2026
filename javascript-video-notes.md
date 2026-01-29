@@ -1,6 +1,6 @@
 <h1>JavaScript introduction videos</h1>
 
-<h2>Video 1/51</h2>
+<h5>Video 1/51</h5>
 There is not much to say about this one, an introduction to the series and presentation of the ones behind it.
 
 Video 2/51
