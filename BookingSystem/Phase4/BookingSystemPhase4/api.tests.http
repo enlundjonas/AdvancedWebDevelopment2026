@@ -1,0 +1,13 @@
+### Valid resource creation
+POST http://localhost:5000/api/resources
+Content-Type: application/json
+
+
+{
+  "action": "create",
+  "resourceName": "R",
+  "resourceDescription": "lakjglkdsfjg",
+  "resourceAvailable": true,
+  "resourcePrice": 20.5,
+  "resourcePriceUnit": "hour"
+}
