@@ -1,6 +1,7 @@
 <h1>CREATE</h1>
-```mermaid
-sequenceDiagram
+
+    ```mermaid
+    sequenceDiagram
     participant U as User (Browser)
     participant F as Frontend (form.js and resources.js)
     participant B as Backend (Express Route)
@@ -33,9 +34,12 @@ sequenceDiagram
             F-->>U: Show success message
         end
     end
+
 <h1>READ</h1>
-```mermaid
-sequenceDiagram
+
+
+    ```mermaid
+    sequenceDiagram
     participant U as User (Browser)
     participant F as Frontend (form.js and resources.js)
     participant B as Backend (Express Route)
