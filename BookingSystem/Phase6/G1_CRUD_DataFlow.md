@@ -34,7 +34,7 @@
             F-->>U: Show success message
         end
     end
-
+    ```
 # READ
 
 
@@ -64,3 +64,4 @@
         B-->>F: 200 OK + JSON
         F-->>U: Display resource
     end
+    ```
