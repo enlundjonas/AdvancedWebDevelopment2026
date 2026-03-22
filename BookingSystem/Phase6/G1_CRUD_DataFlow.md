@@ -90,16 +90,20 @@ alt Validation fails
     F-->>U: Show validation message
 else Validation OK
     B->>S: updateResource(id, data)
-    S->>DB: UPDATE resources WHERE id
+    S->>DB: UPDATE resources SET ... WHERE id
 
-B->>S: getResource(id)
-S->>DB: UPDATE resources SET ... WHERE id
-
-else Success
-    DB-->>S: Resource data
-    S-->>B: Resource
-    B-->>F: 200 OK + JSON
-    F-->>U: Display success message
+    alt Resource not found
+        DB-->>S: No rows updated
+        S-->>B: Not found
+        B-->>F: 404 Not Found
+        F-->>U: Show error message
+    else Success
+        DB-->>S: Updated
+        S-->>B: Success
+        B-->>F: 200 OK
+        F-->>U: Show success message
+    end
+end
 ```
 
 # DELETE
