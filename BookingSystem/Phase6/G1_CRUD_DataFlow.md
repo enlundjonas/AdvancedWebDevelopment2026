@@ -66,3 +66,51 @@ else Success
     F-->>U: Display resource
 end
 ```
+
+# UPDATE
+
+```mermaid
+sequenceDiagram
+participant U as User (Browser)
+participant F as Frontend (form.js and resources.js)
+participant B as Backend (Express Route)
+participant V as express-validator
+participant S as Resource Service
+participant DB as PostgreSQL
+
+U->>F: Submit updated resource
+F->>F: Client-side validation
+F->>B: PUT /api/resources/:id
+
+B->>V: Validate request
+V-->>B: Validation result
+
+alt Validation fails
+    B-->>F: 400 Bad Request + errors[]
+    F-->>U: Show validation message
+else Validation OK
+    B->>S: updateResource(id, data)
+    S->>DB: UPDATE resources WHERE id
+
+B->>S: getResource(id)
+S->>DB: UPDATE resources SET ... WHERE id
+
+else Success
+    DB-->>S: Resource data
+    S-->>B: Resource
+    B-->>F: 200 OK + JSON
+    F-->>U: Display success message
+```
+
+# DELETE
+
+```mermaid
+sequenceDiagram
+participant U as User (Browser)
+participant F as Frontend (form.js and resources.js)
+participant B as Backend (Express Route)
+participant V as express-validator
+participant S as Resource Service
+participant DB as PostgreSQL
+
+```
