@@ -42,28 +42,27 @@ const resourceValidators = [
     .isIn(['create'])
     .withMessage("action must be 'create'"),
 
-  body('resourceName')
+   body('resourceName')
     .exists({ checkFalsy: true }).withMessage('resourceName is required')
     .isLength({min:5, max: 30}).withMessage('resourceName must be 5-30 characters')
+    .matches(/^[a-zA-Z0-9äöåÄÖÅ .,-]+$/).withMessage('resourceName contains invalid characters')
     .isString().withMessage('resourceName must be a string')
-    .trim()
-    .escape(),
+    .trim(),
 
-  body('resourceDescription')
+body('resourceDescription')
     .exists({ checkFalsy: true }).withMessage('resourceDescription is required')
     .isString().withMessage('resourceDescription must be a string')
-    .trim()
-    .escape()
     .isLength({ min: 10, max: 50 }).withMessage('resourceDescription must be 10-50 characters')
-    .matches(/^[a-zA-Z0-9 .,!?'-]+$/).withMessage('resourceDescription contains invalid characters'),
+    .matches(/^[a-zA-Z0-9äöåÄÖÅ .,-]+$/).withMessage('resourceDescription contains invalid characters')
+    .trim(),
 
   body('resourceAvailable')
-    .exists({ checkFalsy: true }).withMessage('resourceAvailable is required')
+    .exists()
     .isBoolean().withMessage('resourceAvailable must be boolean')
     .toBoolean(), // coercion
 
   body('resourcePrice')
-    .exists({ checkFalsy: true }).withMessage('resourcePrice is required')
+    .exists()
     .isFloat({ min: 0 }).withMessage('resourcePrice must be a non-negative number')
     .toFloat(), // coercion
 
