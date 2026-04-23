@@ -124,8 +124,10 @@ function createResourceNameInput(container) {
 function isResourceNameValid(value) {
   const trimmed = value.trim();
 
-  // Allowed: letters, numbers, Finnish letters, and space (based on your current regex)
-  const allowedPattern = /^[a-zA-Z0-9äöåÄÖÅ ]+$/;
+  // Allowed: letters, numbers, Finnish letters, some special characters, and space
+  const allowedPattern = /^[a-zA-Z0-9äöåÄÖÅ .,-]+$/;
+
+  
 
   const lengthValid = trimmed.length >= 5 && trimmed.length <= 30;
   const charactersValid = allowedPattern.test(trimmed);
@@ -136,8 +138,8 @@ function isResourceNameValid(value) {
 function isResourceDescriptionValid(value) {
   const trimmed = value.trim();
 
-  // Allowed: letters, numbers, Finnish letters, and space (based on your current regex)
-  const allowedPattern = /^[a-zA-Z0-9äöåÄÖÅ ]+$/;
+  // Allowed: letters, numbers, Finnish letters, some special characters, and space
+  const allowedPattern = /^[a-zA-Z0-9äöåÄÖÅ .,-]+$/;
 
   const lengthValid = trimmed.length >= 10 && trimmed.length <= 50;
   const charactersValid = allowedPattern.test(trimmed);
