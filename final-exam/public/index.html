@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Registry</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-grid">
+            <section>
+                <h1 class="site-title">
+                    <a href="/" class="site-title-link">ClientCore</a>
+                </h1>
+                <p class="site-tagline">
+                    A minimal customer registry system.
+                </p>
+            </section>
+
+            <aside class="author-card">
+                <p><strong>Author:</strong> <span id="author-name">Jonas Enlund</span></p>
+                <p><strong>Group ID:</strong> <span id="group-id">NITS24K</span></p>
+            </aside>
+        </div>
+    </header>
+
+    <main>
+        <div class="container layout">
+
+            <section class="hero-card" aria-labelledby="overview-heading">
+                <h2 id="overview-heading">System Overview</h2>
+                <p>
+                    This customer management interface allows users to add new customers to the registry,
+                    update existing customer information, and remove customer records when needed.
+                </p>
+                <p>
+                    The <strong>Customer Management</strong> area is reserved for create, update, and delete
+                    actions, while the <strong>Customer Records</strong> area displays all customer data
+                    currently stored in the registry.
+                </p>
+            </section>
+
+            <div class="content-grid">
+                <section class="panel" aria-labelledby="customer-management-heading">
+                    <h2 id="customer-management-heading">Customer Management</h2>
+                    <p class="panel-description">
+                        Use this area to add new customers, edit existing customer information, and delete records.
+                    </p>
+                        
+                    <form id="customerForm" class="form">
+                            <div class="form-group">
+                                <label for="firstNameInput">First name:</label>
+                                <input id="first_name" type="text" required placeholder="First name (2-15 letters)" minlength="2" maxlength="15" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastNameInput">Last name:</label>
+                                <input id="last_name" type="text" required placeholder="Last name (2-15 letters)" minlength="2" maxlength="15" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\-'\s]+$">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailInput">E-mail address:</label>
+                                <input id="email" type="email" required placeholder="name@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneInput">Telephone number:</label>
+                                <input id="phone" type="tel" required placeholder="E.g. +358 XXX XXXX">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label" for="DOBInput">Date of birth:</label>
+                                <input id="birth_date" type="date" required placeholder="dd-mm-yyyy">
+                            </div>
+
+                            <button class="submitButton" type="submit">Add customer</button>
+
+                            <button class="updateButton" disabled type="button">Update information</button>
+
+                            <button class="deleteButton" disabled type="button">Delete customer</button>
+                    </form>
+                </section>
+
+                <section class="panel" aria-labelledby="customer-records-heading">
+                    <h2 id="customer-records-heading">Customer Records</h2>
+                    <p class="panel-description">
+                        This area displays all customer records currently stored in the registry.
+                    </p>
+
+                    <div class="placeholder-box" id="customer-list">
+                        <p>
+                            Customer records from the registry will be displayed here later.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>A minimal customer registry system.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
